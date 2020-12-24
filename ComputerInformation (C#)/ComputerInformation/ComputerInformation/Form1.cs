@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Management;
 using System.Net.NetworkInformation;
-
+using System.Diagnostics;
 
 namespace ComputerInformation
 {
@@ -23,6 +23,7 @@ namespace ComputerInformation
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            my();
             loadCPU();
             loadMotherBoard();
             loadRAM();
@@ -170,10 +171,61 @@ namespace ComputerInformation
 
                 if (propData.Value != null)
                 {
-                    sb.AppendLine(propData.Value.ToString());
+                    sb.AppendLine(propData.Name + ": " + propData.Value.ToString());
                 }
             }
             richTextBox1.Text = sb.ToString();
+        }
+
+        private void my()
+        {
+            ManagementObjectSearcher Search = new ManagementObjectSearcher("Select * From Win32_PhysicalMemory");
+            var ser = Search.Get();
+            foreach (ManagementObject Mobject in ser)
+            {
+                Console.WriteLine("--------------Новая пачка--------------");
+                foreach (var obj in Mobject.Properties)
+                {
+                    Console.Write(obj.Name.ToString().PadLeft(10) + ":");
+                    try
+                    {
+                        Console.WriteLine(obj.Value.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine();
+                    }
+                }
+            }
+            Console.WriteLine("--------------Материнка!--------------");
+            Search = new ManagementObjectSearcher("Select * From Win32_BaseBoard");
+            ser = Search.Get();
+            foreach (ManagementObject Mobject in ser)
+            {
+                Console.WriteLine("--------------Новая пачка--------------");
+                foreach (var obj in Mobject.Properties)
+                {
+                    Console.Write(obj.Name.ToString().PadLeft(10) + ":");
+                    if (obj.Name == "ConfigOptions")
+                    {
+                        var mass = obj.Value as String[];
+                        foreach (var str in mass)
+                        {
+                            Console.WriteLine("--" + str);
+                        }
+                        continue;
+                    }
+
+                    try
+                    {
+                        Console.WriteLine(obj.Value.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine();
+                    }
+                }
+            }
         }
 
         private void loadRAM()
@@ -181,10 +233,9 @@ namespace ComputerInformation
             StringBuilder sb = new StringBuilder();
 
             ManagementObjectSearcher Search = new ManagementObjectSearcher("Select * From Win32_ComputerSystem");
-
-            foreach (ManagementObject Mobject in Search.Get())
+            var ser = Search.Get();
+            foreach (ManagementObject Mobject in ser)
             {
-
                 double Ram_Bytes = (Convert.ToDouble(Mobject["TotalPhysicalMemory"]));
                 sb.AppendLine(string.Format("RAM Size in Bytes: {0}", Ram_Bytes));
                 sb.AppendLine(string.Format("RAM Size in Kilo Bytes: {0}", Ram_Bytes / 1024));
@@ -327,7 +378,7 @@ namespace ComputerInformation
         private void loadNetwork()
         {
             StringBuilder sb = new StringBuilder();
-            
+
             IPGlobalProperties computerProperties = IPGlobalProperties.GetIPGlobalProperties();
             NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
             sb.AppendLine(string.Format("Interface information for {0}.{1}     ",
@@ -411,4 +462,4 @@ namespace ComputerInformation
 }
 
 
-    
+
