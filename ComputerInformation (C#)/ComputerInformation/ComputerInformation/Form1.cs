@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Management;
 using System.Net.NetworkInformation;
 using System.Diagnostics;
+using Microsoft.Win32;
 
 namespace ComputerInformation
 {
@@ -24,6 +25,7 @@ namespace ComputerInformation
         private void Form1_Load(object sender, EventArgs e)
         {
             my();
+            soft();
             loadCPU();
             loadMotherBoard();
             loadRAM();
@@ -37,6 +39,32 @@ namespace ComputerInformation
         private void Refresh_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void soft()
+        {
+            string displayName;
+            StringBuilder sb = new StringBuilder();
+            RegistryKey key;
+
+            key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall");
+            foreach (String keyName in key.GetSubKeyNames())
+            {
+                RegistryKey subkey = key.OpenSubKey(keyName);
+                string str1 = subkey.GetValue("DisplayName") as string;
+                string str2 = subkey.GetValue("InstallLocation") as string;
+                if(str1 != null)
+                {
+                    displayName = str1;
+                    if (str2 != "")
+                        displayName = displayName.PadRight(80) + " (" + str2 + ")";
+                    sb.AppendLine(displayName);
+                }
+            }
+            Font mystyle = new Font("Consolas", 10);
+            richTextBox9.Font = mystyle;
+            richTextBox9.Text = sb.ToString();
+            richTextBox9.Text = sb.ToString();
         }
 
         private void loadCPU()
