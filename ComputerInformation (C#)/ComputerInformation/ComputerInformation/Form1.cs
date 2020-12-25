@@ -15,11 +15,45 @@ using Microsoft.Win32;
 
 namespace ComputerInformation
 {
+    public struct comp
+    {
+        public int invent_no;
+        public string kabinet;
+        public string n_comp;
+        public string CPU;
+        public string MB;
+        public string GC;
+        public string STOR;
+        public string HDD;
+        public string RAM;
+        public string DEV;
+        public string OS;
+        public string NET;
+        public string MEM;
+        public string SOFT;
+    }
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
+        }
+
+        public comp export_struct_get()
+        {
+            comp output = new comp();
+            output.CPU = cpu_info;
+            output.DEV = richTextBox5.Text;
+            output.GC = richTextBox4.Text;
+            output.HDD = richTextBox10.Text;
+            output.MB = richTextBox1.Text;
+            output.MEM = richTextBox8.Text;
+            output.NET = richTextBox7.Text;
+            output.OS = richTextBox6.Text;
+            output.RAM = richTextBox2.Text;
+            output.SOFT = richTextBox6.Text;
+            output.STOR = richTextBox3.Text;
+            return output;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -141,6 +175,8 @@ namespace ComputerInformation
             richTextBox9.Text = sb.ToString();
         }
 
+        string cpu_info;
+
         private void loadCPU()
         {
             FlowLayoutPanel p = new FlowLayoutPanel();
@@ -224,6 +260,29 @@ namespace ComputerInformation
             l26.Text = u.ToString();
             p.Controls.Add(l25);
             p.Controls.Add(l26);
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(l1.Text);
+            sb.AppendLine(l2.Text);
+            sb.AppendLine(l3.Text);
+            sb.AppendLine(l4.Text);
+            sb.AppendLine(l5.Text);
+            sb.AppendLine(l6.Text);
+            sb.AppendLine(l7.Text);
+            sb.AppendLine(l8.Text);
+            sb.AppendLine(l15.Text);
+            sb.AppendLine(l16.Text);
+            sb.AppendLine(l17.Text);
+            sb.AppendLine(l18.Text);
+            sb.AppendLine(l19.Text);
+            sb.AppendLine(l20.Text);
+            sb.AppendLine(l21.Text);
+            sb.AppendLine(l22.Text);
+            sb.AppendLine(l23.Text);
+            sb.AppendLine(l24.Text);
+            sb.AppendLine(l25.Text);
+            sb.AppendLine(l26.Text);
+            cpu_info = sb.ToString();
 
         }
         private void loadMotherBoard()
