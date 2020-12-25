@@ -48,6 +48,8 @@
             this.richTextBox8 = new System.Windows.Forms.RichTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
             this.TabbLayout.SuspendLayout();
             this.MotherBoard.SuspendLayout();
             this.GraphicCard.SuspendLayout();
@@ -58,6 +60,7 @@
             this.Network.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabbLayout
@@ -75,6 +78,7 @@
             this.TabbLayout.Controls.Add(this.Network);
             this.TabbLayout.Controls.Add(this.tabPage1);
             this.TabbLayout.Controls.Add(this.tabPage2);
+            this.TabbLayout.Controls.Add(this.tabPage3);
             this.TabbLayout.Location = new System.Drawing.Point(12, 12);
             this.TabbLayout.Name = "TabbLayout";
             this.TabbLayout.SelectedIndex = 0;
@@ -275,6 +279,28 @@
             this.richTextBox9.TabIndex = 0;
             this.richTextBox9.Text = "";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.richTextBox10);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(474, 510);
+            this.tabPage3.TabIndex = 10;
+            this.tabPage3.Text = "hdd";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox10
+            // 
+            this.richTextBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox10.Location = new System.Drawing.Point(6, 6);
+            this.richTextBox10.Name = "richTextBox10";
+            this.richTextBox10.Size = new System.Drawing.Size(462, 498);
+            this.richTextBox10.TabIndex = 0;
+            this.richTextBox10.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,6 +320,7 @@
             this.Network.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -320,6 +347,8 @@
         private System.Windows.Forms.RichTextBox richTextBox8;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.RichTextBox richTextBox9;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.RichTextBox richTextBox10;
     }
 }
 

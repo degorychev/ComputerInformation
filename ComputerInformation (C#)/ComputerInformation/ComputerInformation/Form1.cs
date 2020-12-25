@@ -24,6 +24,7 @@ namespace ComputerInformation
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            HDD_hard();
             my();
             soft();
             loadCPU();
@@ -39,6 +40,79 @@ namespace ComputerInformation
         private void Refresh_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void HDD_hard()
+        {
+            StringBuilder sb = new StringBuilder();
+            ManagementObjectSearcher Search = new ManagementObjectSearcher("Select * From Win32_DiskDrive");
+            var ser = Search.Get();
+            try
+            {
+                foreach (ManagementObject Mobject in ser)
+                {
+                    sb.AppendLine("-------Винчестер-------");
+                    foreach (var obj in Mobject.Properties)
+                    {
+                        sb.Append(obj.Name.ToString().PadRight(20) + ":");
+                        if (obj.Name == "Capabilities")
+                        {
+                            try
+                            {
+                                var mass = obj.Value as UInt16[];
+                                sb.AppendLine();
+                                foreach (var str in mass)
+                                {
+                                    sb.AppendLine("array: ".PadLeft(10) + str);
+                                }
+                                continue;
+                            }
+                            catch (Exception ex)
+                            {
+                                sb.AppendLine("ERROR: " + ex.Message);
+                                continue;
+                            }
+                        }
+                        else if (obj.Name == "CapabilityDescriptions")
+                        {
+                            try
+                            {
+                                var mass = obj.Value as String[];
+                                sb.AppendLine();
+                                foreach (var str in mass)
+                                {
+                                    sb.AppendLine("array: ".PadLeft(10) + str.Trim());
+                                }
+                                continue;
+                            }
+                            catch (Exception ex)
+                            {
+                                sb.AppendLine("ERROR: " + ex.Message);
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            try
+                            {
+                                sb.AppendLine(obj.Value.ToString().Trim());
+                            }
+                            catch (Exception)
+                            {
+                                sb.AppendLine();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                sb.AppendLine("ERROR: " + e.Message);
+            }
+            Font mystyle = new Font("Consolas", 10);
+            richTextBox10.Font = mystyle;
+            richTextBox10.Text = sb.ToString();
+            richTextBox10.Text = sb.ToString();
         }
 
         private void soft()
@@ -154,9 +228,6 @@ namespace ComputerInformation
         }
         private void loadMotherBoard()
         {
-
-
-
             SelectQuery Sq = new SelectQuery("Win32_MotherboardDevice");
             ManagementObjectSearcher objOSDetails = new ManagementObjectSearcher(Sq);
             ManagementObjectCollection osDetailsCollection = objOSDetails.Get();
