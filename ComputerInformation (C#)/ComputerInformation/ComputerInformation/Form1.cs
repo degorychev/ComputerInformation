@@ -179,53 +179,73 @@ namespace ComputerInformation
 
         private void my()
         {
+            StringBuilder sb = new StringBuilder();
             ManagementObjectSearcher Search = new ManagementObjectSearcher("Select * From Win32_PhysicalMemory");
             var ser = Search.Get();
-            foreach (ManagementObject Mobject in ser)
+            try
             {
-                Console.WriteLine("--------------Новая пачка--------------");
-                foreach (var obj in Mobject.Properties)
+                sb.AppendLine("Количество плашек: " + ser.Count);
+                int i = 0;
+                foreach (ManagementObject Mobject in ser)
                 {
-                    Console.Write(obj.Name.ToString().PadLeft(10) + ":");
-                    try
+                    sb.AppendLine("-------Плашка № " + i++ + "-------");
+                    foreach (var obj in Mobject.Properties)
                     {
-                        Console.WriteLine(obj.Value.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine();
-                    }
-                }
-            }
-            Console.WriteLine("--------------Материнка!--------------");
-            Search = new ManagementObjectSearcher("Select * From Win32_BaseBoard");
-            ser = Search.Get();
-            foreach (ManagementObject Mobject in ser)
-            {
-                Console.WriteLine("--------------Новая пачка--------------");
-                foreach (var obj in Mobject.Properties)
-                {
-                    Console.Write(obj.Name.ToString().PadLeft(10) + ":");
-                    if (obj.Name == "ConfigOptions")
-                    {
-                        var mass = obj.Value as String[];
-                        foreach (var str in mass)
+                        sb.Append(obj.Name.ToString().PadRight(20) + ":");
+                        try
                         {
-                            Console.WriteLine("--" + str);
+                            sb.AppendLine(obj.Value.ToString());
                         }
-                        continue;
+                        catch (Exception)
+                        {
+                            sb.AppendLine();
+                        }
                     }
+                }
+                sb.AppendLine("--------------Материнка!--------------");
+                Search = new ManagementObjectSearcher("Select * From Win32_BaseBoard");
+                ser = Search.Get();
+                foreach (ManagementObject Mobject in ser)
+                {
+                    sb.AppendLine("--------------Новая пачка--------------");
+                    foreach (var obj in Mobject.Properties)
+                    {
+                        sb.Append(obj.Name.ToString().PadRight(20) + ":");
+                        if (obj.Name == "ConfigOptions")
+                        {
+                            try
+                            {
+                                var mass = obj.Value as String[];
+                                foreach (var str in mass)
+                                {
+                                    sb.AppendLine("array: " + str);
+                                }
+                                continue;
+                            }catch(Exception ex)
+                            {
+                                sb.AppendLine("ERROR: " + ex.Message);
+                                continue;
+                            }
+                        }
 
-                    try
-                    {
-                        Console.WriteLine(obj.Value.ToString());
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine();
+                        try
+                        {
+                            sb.AppendLine(obj.Value.ToString());
+                        }
+                        catch (Exception)
+                        {
+                            sb.AppendLine();
+                        }
                     }
                 }
             }
+            catch(Exception ex)
+            {
+                sb.AppendLine("ERROR: " + ex.Message);
+            }
+            Font mystyle = new Font("Consolas", 10);
+            richTextBox8.Font = mystyle;
+            richTextBox8.Text = sb.ToString();
         }
 
         private void loadRAM()

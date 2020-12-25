@@ -31,19 +31,21 @@
             this.TabbLayout = new System.Windows.Forms.TabControl();
             this.CPUtab = new System.Windows.Forms.TabPage();
             this.MotherBoard = new System.Windows.Forms.TabPage();
-            this.GraphicCard = new System.Windows.Forms.TabPage();
-            this.Storage = new System.Windows.Forms.TabPage();
-            this.RAM = new System.Windows.Forms.TabPage();
-            this.Devices = new System.Windows.Forms.TabPage();
-            this.Software = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.GraphicCard = new System.Windows.Forms.TabPage();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.Storage = new System.Windows.Forms.TabPage();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.RAM = new System.Windows.Forms.TabPage();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.Devices = new System.Windows.Forms.TabPage();
             this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.Software = new System.Windows.Forms.TabPage();
             this.richTextBox6 = new System.Windows.Forms.RichTextBox();
             this.Network = new System.Windows.Forms.TabPage();
             this.richTextBox7 = new System.Windows.Forms.RichTextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
             this.TabbLayout.SuspendLayout();
             this.MotherBoard.SuspendLayout();
             this.GraphicCard.SuspendLayout();
@@ -52,10 +54,14 @@
             this.Devices.SuspendLayout();
             this.Software.SuspendLayout();
             this.Network.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabbLayout
             // 
+            this.TabbLayout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TabbLayout.Controls.Add(this.CPUtab);
             this.TabbLayout.Controls.Add(this.MotherBoard);
             this.TabbLayout.Controls.Add(this.GraphicCard);
@@ -64,6 +70,7 @@
             this.TabbLayout.Controls.Add(this.Devices);
             this.TabbLayout.Controls.Add(this.Software);
             this.TabbLayout.Controls.Add(this.Network);
+            this.TabbLayout.Controls.Add(this.tabPage1);
             this.TabbLayout.Location = new System.Drawing.Point(12, 12);
             this.TabbLayout.Name = "TabbLayout";
             this.TabbLayout.SelectedIndex = 0;
@@ -75,7 +82,7 @@
             this.CPUtab.Location = new System.Drawing.Point(4, 22);
             this.CPUtab.Name = "CPUtab";
             this.CPUtab.Padding = new System.Windows.Forms.Padding(3);
-            this.CPUtab.Size = new System.Drawing.Size(403, 510);
+            this.CPUtab.Size = new System.Drawing.Size(474, 510);
             this.CPUtab.TabIndex = 0;
             this.CPUtab.Text = "CPU";
             this.CPUtab.UseVisualStyleBackColor = true;
@@ -91,16 +98,34 @@
             this.MotherBoard.Text = "MotherBoard";
             this.MotherBoard.UseVisualStyleBackColor = true;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(6, 6);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(462, 498);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
             // GraphicCard
             // 
             this.GraphicCard.Controls.Add(this.richTextBox4);
             this.GraphicCard.Location = new System.Drawing.Point(4, 22);
             this.GraphicCard.Name = "GraphicCard";
             this.GraphicCard.Padding = new System.Windows.Forms.Padding(3);
-            this.GraphicCard.Size = new System.Drawing.Size(403, 510);
+            this.GraphicCard.Size = new System.Drawing.Size(474, 510);
             this.GraphicCard.TabIndex = 2;
             this.GraphicCard.Text = "GraphicCard";
             this.GraphicCard.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox4
+            // 
+            this.richTextBox4.Location = new System.Drawing.Point(6, 6);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.ReadOnly = true;
+            this.richTextBox4.Size = new System.Drawing.Size(391, 498);
+            this.richTextBox4.TabIndex = 0;
+            this.richTextBox4.Text = "";
             // 
             // Storage
             // 
@@ -113,6 +138,15 @@
             this.Storage.Text = "Storage";
             this.Storage.UseVisualStyleBackColor = true;
             // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Location = new System.Drawing.Point(7, 7);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.ReadOnly = true;
+            this.richTextBox3.Size = new System.Drawing.Size(461, 497);
+            this.richTextBox3.TabIndex = 0;
+            this.richTextBox3.Text = "";
+            // 
             // RAM
             // 
             this.RAM.Controls.Add(this.richTextBox2);
@@ -123,6 +157,15 @@
             this.RAM.TabIndex = 4;
             this.RAM.Text = "RAM";
             this.RAM.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(6, 6);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.Size = new System.Drawing.Size(462, 498);
+            this.richTextBox2.TabIndex = 0;
+            this.richTextBox2.Text = "";
             // 
             // Devices
             // 
@@ -135,6 +178,15 @@
             this.Devices.Text = "Devices";
             this.Devices.UseVisualStyleBackColor = true;
             // 
+            // richTextBox5
+            // 
+            this.richTextBox5.Location = new System.Drawing.Point(7, 7);
+            this.richTextBox5.Name = "richTextBox5";
+            this.richTextBox5.ReadOnly = true;
+            this.richTextBox5.Size = new System.Drawing.Size(461, 497);
+            this.richTextBox5.TabIndex = 0;
+            this.richTextBox5.Text = "";
+            // 
             // Software
             // 
             this.Software.Controls.Add(this.richTextBox6);
@@ -145,51 +197,6 @@
             this.Software.TabIndex = 6;
             this.Software.Text = "Software";
             this.Software.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(6, 6);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(462, 498);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(6, 6);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(462, 498);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.Location = new System.Drawing.Point(7, 7);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.ReadOnly = true;
-            this.richTextBox3.Size = new System.Drawing.Size(461, 497);
-            this.richTextBox3.TabIndex = 0;
-            this.richTextBox3.Text = "";
-            // 
-            // richTextBox4
-            // 
-            this.richTextBox4.Location = new System.Drawing.Point(6, 6);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.ReadOnly = true;
-            this.richTextBox4.Size = new System.Drawing.Size(391, 498);
-            this.richTextBox4.TabIndex = 0;
-            this.richTextBox4.Text = "";
-            // 
-            // richTextBox5
-            // 
-            this.richTextBox5.Location = new System.Drawing.Point(7, 7);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.ReadOnly = true;
-            this.richTextBox5.Size = new System.Drawing.Size(461, 497);
-            this.richTextBox5.TabIndex = 0;
-            this.richTextBox5.Text = "";
             // 
             // richTextBox6
             // 
@@ -220,6 +227,28 @@
             this.richTextBox7.TabIndex = 0;
             this.richTextBox7.Text = "";
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.richTextBox8);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(474, 510);
+            this.tabPage1.TabIndex = 8;
+            this.tabPage1.Text = "Мой вывод";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox8
+            // 
+            this.richTextBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox8.Location = new System.Drawing.Point(3, 6);
+            this.richTextBox8.Name = "richTextBox8";
+            this.richTextBox8.Size = new System.Drawing.Size(465, 498);
+            this.richTextBox8.TabIndex = 0;
+            this.richTextBox8.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +266,7 @@
             this.Devices.ResumeLayout(false);
             this.Software.ResumeLayout(false);
             this.Network.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -259,6 +289,8 @@
         private System.Windows.Forms.RichTextBox richTextBox6;
         private System.Windows.Forms.TabPage Network;
         private System.Windows.Forms.RichTextBox richTextBox7;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.RichTextBox richTextBox8;
     }
 }
 
