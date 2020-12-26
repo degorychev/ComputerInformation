@@ -50,8 +50,17 @@
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.richTextBox10 = new System.Windows.Forms.RichTextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.консолькаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cPUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.motherBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rAMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.graphicCardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.softwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.devicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TabbLayout.SuspendLayout();
             this.MotherBoard.SuspendLayout();
             this.GraphicCard.SuspendLayout();
@@ -63,6 +72,7 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,6 +92,7 @@
             this.TabbLayout.Controls.Add(this.tabPage1);
             this.TabbLayout.Controls.Add(this.tabPage2);
             this.TabbLayout.Controls.Add(this.tabPage3);
+            this.TabbLayout.Controls.Add(this.tabPage4);
             this.TabbLayout.Location = new System.Drawing.Point(12, 27);
             this.TabbLayout.Name = "TabbLayout";
             this.TabbLayout.SelectedIndex = 0;
@@ -104,7 +115,7 @@
             this.MotherBoard.Location = new System.Drawing.Point(4, 22);
             this.MotherBoard.Name = "MotherBoard";
             this.MotherBoard.Padding = new System.Windows.Forms.Padding(3);
-            this.MotherBoard.Size = new System.Drawing.Size(474, 510);
+            this.MotherBoard.Size = new System.Drawing.Size(474, 495);
             this.MotherBoard.TabIndex = 1;
             this.MotherBoard.Text = "MotherBoard";
             this.MotherBoard.UseVisualStyleBackColor = true;
@@ -124,7 +135,7 @@
             this.GraphicCard.Location = new System.Drawing.Point(4, 22);
             this.GraphicCard.Name = "GraphicCard";
             this.GraphicCard.Padding = new System.Windows.Forms.Padding(3);
-            this.GraphicCard.Size = new System.Drawing.Size(474, 510);
+            this.GraphicCard.Size = new System.Drawing.Size(474, 495);
             this.GraphicCard.TabIndex = 2;
             this.GraphicCard.Text = "GraphicCard";
             this.GraphicCard.UseVisualStyleBackColor = true;
@@ -144,7 +155,7 @@
             this.Storage.Location = new System.Drawing.Point(4, 22);
             this.Storage.Name = "Storage";
             this.Storage.Padding = new System.Windows.Forms.Padding(3);
-            this.Storage.Size = new System.Drawing.Size(474, 510);
+            this.Storage.Size = new System.Drawing.Size(474, 495);
             this.Storage.TabIndex = 3;
             this.Storage.Text = "Storage";
             this.Storage.UseVisualStyleBackColor = true;
@@ -164,7 +175,7 @@
             this.RAM.Location = new System.Drawing.Point(4, 22);
             this.RAM.Name = "RAM";
             this.RAM.Padding = new System.Windows.Forms.Padding(3);
-            this.RAM.Size = new System.Drawing.Size(474, 510);
+            this.RAM.Size = new System.Drawing.Size(474, 495);
             this.RAM.TabIndex = 4;
             this.RAM.Text = "RAM";
             this.RAM.UseVisualStyleBackColor = true;
@@ -184,7 +195,7 @@
             this.Devices.Location = new System.Drawing.Point(4, 22);
             this.Devices.Name = "Devices";
             this.Devices.Padding = new System.Windows.Forms.Padding(3);
-            this.Devices.Size = new System.Drawing.Size(474, 510);
+            this.Devices.Size = new System.Drawing.Size(474, 495);
             this.Devices.TabIndex = 5;
             this.Devices.Text = "Devices";
             this.Devices.UseVisualStyleBackColor = true;
@@ -204,7 +215,7 @@
             this.Software.Location = new System.Drawing.Point(4, 22);
             this.Software.Name = "Software";
             this.Software.Padding = new System.Windows.Forms.Padding(3);
-            this.Software.Size = new System.Drawing.Size(474, 510);
+            this.Software.Size = new System.Drawing.Size(474, 495);
             this.Software.TabIndex = 6;
             this.Software.Text = "Software";
             this.Software.UseVisualStyleBackColor = true;
@@ -224,7 +235,7 @@
             this.Network.Location = new System.Drawing.Point(4, 22);
             this.Network.Name = "Network";
             this.Network.Padding = new System.Windows.Forms.Padding(3);
-            this.Network.Size = new System.Drawing.Size(474, 510);
+            this.Network.Size = new System.Drawing.Size(474, 495);
             this.Network.TabIndex = 7;
             this.Network.Text = "Network";
             this.Network.UseVisualStyleBackColor = true;
@@ -244,7 +255,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(474, 510);
+            this.tabPage1.Size = new System.Drawing.Size(474, 495);
             this.tabPage1.TabIndex = 8;
             this.tabPage1.Text = "Мой вывод";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -256,7 +267,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox8.Location = new System.Drawing.Point(3, 6);
             this.richTextBox8.Name = "richTextBox8";
-            this.richTextBox8.Size = new System.Drawing.Size(465, 498);
+            this.richTextBox8.Size = new System.Drawing.Size(465, 483);
             this.richTextBox8.TabIndex = 0;
             this.richTextBox8.Text = "";
             // 
@@ -288,7 +299,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(474, 510);
+            this.tabPage3.Size = new System.Drawing.Size(474, 495);
             this.tabPage3.TabIndex = 10;
             this.tabPage3.Text = "hdd";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -304,10 +315,30 @@
             this.richTextBox10.TabIndex = 0;
             this.richTextBox10.Text = "";
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.richTextBox11);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(474, 495);
+            this.tabPage4.TabIndex = 11;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox11
+            // 
+            this.richTextBox11.Location = new System.Drawing.Point(6, 6);
+            this.richTextBox11.Name = "richTextBox11";
+            this.richTextBox11.Size = new System.Drawing.Size(462, 483);
+            this.richTextBox11.TabIndex = 0;
+            this.richTextBox11.Text = "";
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.экспортToolStripMenuItem});
+            this.экспортToolStripMenuItem,
+            this.консолькаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(506, 24);
@@ -320,6 +351,62 @@
             this.экспортToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.экспортToolStripMenuItem.Text = "Экспорт";
             this.экспортToolStripMenuItem.Click += new System.EventHandler(this.экспортToolStripMenuItem_Click);
+            // 
+            // консолькаToolStripMenuItem
+            // 
+            this.консолькаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cPUToolStripMenuItem,
+            this.motherBoardToolStripMenuItem,
+            this.rAMToolStripMenuItem,
+            this.graphicCardToolStripMenuItem,
+            this.softwareToolStripMenuItem,
+            this.devicesToolStripMenuItem});
+            this.консолькаToolStripMenuItem.Name = "консолькаToolStripMenuItem";
+            this.консолькаToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.консолькаToolStripMenuItem.Text = "Консолька";
+            this.консолькаToolStripMenuItem.Click += new System.EventHandler(this.консолькаToolStripMenuItem_Click);
+            // 
+            // cPUToolStripMenuItem
+            // 
+            this.cPUToolStripMenuItem.Name = "cPUToolStripMenuItem";
+            this.cPUToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cPUToolStripMenuItem.Text = "CPU";
+            this.cPUToolStripMenuItem.Click += new System.EventHandler(this.cPUToolStripMenuItem_Click);
+            // 
+            // motherBoardToolStripMenuItem
+            // 
+            this.motherBoardToolStripMenuItem.Name = "motherBoardToolStripMenuItem";
+            this.motherBoardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.motherBoardToolStripMenuItem.Text = "MotherBoard";
+            this.motherBoardToolStripMenuItem.Click += new System.EventHandler(this.motherBoardToolStripMenuItem_Click);
+            // 
+            // rAMToolStripMenuItem
+            // 
+            this.rAMToolStripMenuItem.Name = "rAMToolStripMenuItem";
+            this.rAMToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rAMToolStripMenuItem.Text = "RAM";
+            this.rAMToolStripMenuItem.Click += new System.EventHandler(this.rAMToolStripMenuItem_Click);
+            // 
+            // graphicCardToolStripMenuItem
+            // 
+            this.graphicCardToolStripMenuItem.Name = "graphicCardToolStripMenuItem";
+            this.graphicCardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.graphicCardToolStripMenuItem.Text = "GraphicCard";
+            this.graphicCardToolStripMenuItem.Click += new System.EventHandler(this.graphicCardToolStripMenuItem_Click);
+            // 
+            // softwareToolStripMenuItem
+            // 
+            this.softwareToolStripMenuItem.Name = "softwareToolStripMenuItem";
+            this.softwareToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.softwareToolStripMenuItem.Text = "Software";
+            this.softwareToolStripMenuItem.Click += new System.EventHandler(this.softwareToolStripMenuItem_Click);
+            // 
+            // devicesToolStripMenuItem
+            // 
+            this.devicesToolStripMenuItem.Name = "devicesToolStripMenuItem";
+            this.devicesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.devicesToolStripMenuItem.Text = "Devices";
+            this.devicesToolStripMenuItem.Click += new System.EventHandler(this.devicesToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -343,6 +430,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -376,6 +464,15 @@
         private System.Windows.Forms.RichTextBox richTextBox10;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem экспортToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.RichTextBox richTextBox11;
+        private System.Windows.Forms.ToolStripMenuItem консолькаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cPUToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem motherBoardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rAMToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem graphicCardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem softwareToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem devicesToolStripMenuItem;
     }
 }
 

@@ -12,6 +12,8 @@ using System.Management;
 using System.Net.NetworkInformation;
 using System.Diagnostics;
 using Microsoft.Win32;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace ComputerInformation
 {
@@ -161,7 +163,7 @@ namespace ComputerInformation
                 RegistryKey subkey = key.OpenSubKey(keyName);
                 string str1 = subkey.GetValue("DisplayName") as string;
                 string str2 = subkey.GetValue("InstallLocation") as string;
-                if(str1 != null)
+                if (str1 != null)
                 {
                     displayName = str1;
                     if (str2 != "")
@@ -177,13 +179,14 @@ namespace ComputerInformation
 
         string cpu_info;
 
+
         private void loadCPU()
         {
+
             FlowLayoutPanel p = new FlowLayoutPanel();
             p.Size = new Size(300, 800);
             var cpu = new ManagementObjectSearcher("select * from Win32_Processor").Get().Cast<ManagementObject>().First();
             CPUtab.Controls.Add(p);
-
             Label l1 = new Label();
             Label l2 = new Label();
             Label l3 = new Label();
@@ -379,7 +382,8 @@ namespace ComputerInformation
                                     sb.AppendLine("array: " + str);
                                 }
                                 continue;
-                            }catch(Exception ex)
+                            }
+                            catch (Exception ex)
                             {
                                 sb.AppendLine("ERROR: " + ex.Message);
                                 continue;
@@ -397,7 +401,7 @@ namespace ComputerInformation
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 sb.AppendLine("ERROR: " + ex.Message);
             }
@@ -642,6 +646,42 @@ namespace ComputerInformation
         {
             getinfo gtdialog = new getinfo(export_struct_get());
             gtdialog.ShowDialog();
+        }
+
+        private void консолькаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cPUToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(loaderInfo.loadCPU());
+        }
+
+        private void motherBoardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(loaderInfo.loadMotherBoard());
+        }
+
+        private void rAMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(loaderInfo.loadRAM());
+        }
+
+        private void graphicCardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(loaderInfo.loadGraphicCard());
+        }
+
+        private void softwareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(loaderInfo.loadSoftware());
+        }
+
+        private void devicesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(loaderInfo.loadDevices());
+
         }
     }
 }
