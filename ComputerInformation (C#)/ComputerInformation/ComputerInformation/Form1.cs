@@ -51,7 +51,7 @@ namespace ComputerInformation
             output.NET = richTextBox7.Text;
             output.OS = richTextBox6.Text;
             output.RAM = richTextBox2.Text;
-            output.SOFT = richTextBox6.Text;
+            output.SOFT = richTextBox9.Text;
             output.STOR = richTextBox3.Text;
             return output;
         }
@@ -508,19 +508,20 @@ namespace ComputerInformation
 
             sb.AppendLine(string.Format((string)wmi["Caption"]).Trim());
 
-            sb.AppendLine("Version ");
+            sb.Append("Version :".PadRight(25));
             sb.AppendLine(string.Format((string)wmi["Version"]));
             uint i = (uint)wmi["MaxNumberOfProcesses"];
             ulong l = (ulong)wmi["MaxProcessMemorySize"];
-            sb.AppendLine("MaxNumberOfProcesses ");
+
+            sb.Append("MaxNumberOfProcesses:".PadRight(25));
             sb.AppendLine(i.ToString());
-            sb.AppendLine("MaxProcessMemorySize ");
+            sb.Append("MaxProcessMemorySize:".PadRight(25));
             sb.AppendLine(l.ToString());
-            sb.AppendLine("OSArchitecture ");
+            sb.Append("OSArchitecture:".PadRight(25));
             sb.AppendLine(string.Format((string)wmi["OSArchitecture"]));
-            sb.AppendLine("SerialNumber ");
+            sb.Append("SerialNumber:".PadRight(25));
             sb.AppendLine(string.Format((string)wmi["SerialNumber"]));
-            sb.AppendLine("BuildNumber ");
+            sb.Append("BuildNumber:".PadRight(25));
             sb.AppendLine(string.Format(((string)wmi["BuildNumber"])));
 
             richTextBox6.Text = sb.ToString();
@@ -635,6 +636,12 @@ namespace ComputerInformation
 
                 richTextBox7.Text = sb.ToString();
             }
+        }
+
+        private void экспортToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            getinfo gtdialog = new getinfo(export_struct_get());
+            gtdialog.ShowDialog();
         }
     }
 }

@@ -50,6 +50,8 @@
             this.richTextBox9 = new System.Windows.Forms.RichTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.richTextBox10 = new System.Windows.Forms.RichTextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.экспортToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TabbLayout.SuspendLayout();
             this.MotherBoard.SuspendLayout();
             this.GraphicCard.SuspendLayout();
@@ -61,6 +63,7 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabbLayout
@@ -79,10 +82,10 @@
             this.TabbLayout.Controls.Add(this.tabPage1);
             this.TabbLayout.Controls.Add(this.tabPage2);
             this.TabbLayout.Controls.Add(this.tabPage3);
-            this.TabbLayout.Location = new System.Drawing.Point(12, 12);
+            this.TabbLayout.Location = new System.Drawing.Point(12, 27);
             this.TabbLayout.Name = "TabbLayout";
             this.TabbLayout.SelectedIndex = 0;
-            this.TabbLayout.Size = new System.Drawing.Size(482, 536);
+            this.TabbLayout.Size = new System.Drawing.Size(482, 521);
             this.TabbLayout.TabIndex = 0;
             // 
             // CPUtab
@@ -90,7 +93,7 @@
             this.CPUtab.Location = new System.Drawing.Point(4, 22);
             this.CPUtab.Name = "CPUtab";
             this.CPUtab.Padding = new System.Windows.Forms.Padding(3);
-            this.CPUtab.Size = new System.Drawing.Size(474, 510);
+            this.CPUtab.Size = new System.Drawing.Size(474, 495);
             this.CPUtab.TabIndex = 0;
             this.CPUtab.Text = "CPU";
             this.CPUtab.UseVisualStyleBackColor = true;
@@ -263,7 +266,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(474, 510);
+            this.tabPage2.Size = new System.Drawing.Size(474, 495);
             this.tabPage2.TabIndex = 9;
             this.tabPage2.Text = "Софт";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -275,7 +278,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox9.Location = new System.Drawing.Point(3, 3);
             this.richTextBox9.Name = "richTextBox9";
-            this.richTextBox9.Size = new System.Drawing.Size(468, 501);
+            this.richTextBox9.Size = new System.Drawing.Size(468, 486);
             this.richTextBox9.TabIndex = 0;
             this.richTextBox9.Text = "";
             // 
@@ -301,12 +304,31 @@
             this.richTextBox10.TabIndex = 0;
             this.richTextBox10.Text = "";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.экспортToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(506, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // экспортToolStripMenuItem
+            // 
+            this.экспортToolStripMenuItem.Name = "экспортToolStripMenuItem";
+            this.экспортToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.экспортToolStripMenuItem.Text = "Экспорт";
+            this.экспортToolStripMenuItem.Click += new System.EventHandler(this.экспортToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(506, 560);
             this.Controls.Add(this.TabbLayout);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "ComputerInformation";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -321,7 +343,10 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -349,6 +374,8 @@
         private System.Windows.Forms.RichTextBox richTextBox9;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.RichTextBox richTextBox10;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem экспортToolStripMenuItem;
     }
 }
 
