@@ -14,6 +14,7 @@ using System.Diagnostics;
 using Microsoft.Win32;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using OpenHardwareMonitor.Hardware;
 
 namespace ComputerInformation
 {
@@ -717,6 +718,54 @@ namespace ComputerInformation
         {
             Console.WriteLine("Все вместе:");
             Console.WriteLine(loaderInfo.megaExport());
+        }
+
+        private void temperaturesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CpuTemperatureReader cpuTemperatureReader = new CpuTemperatureReader();
+            var te = cpuTemperatureReader.GetTemperaturesInCelsius();
+            foreach (var sensor in te)
+                Console.WriteLine(String.Format("{0}: {1}", sensor.Key, sensor.Value));
+        }
+    }
+
+    internal sealed class CpuTemperatureReader : IDisposable
+    {
+        private readonly Computer _computer;
+
+        public CpuTemperatureReader()
+        {
+            _computer = new Computer { CPUEnabled = true };
+            _computer.Open();
+        }
+
+        public Dictionary<string, float> GetTemperaturesInCelsius()
+        {
+            var coreAndTemperature = new Dictionary<string, float>();
+
+            foreach (var hardware in _computer.Hardware)
+            {
+                hardware.Update(); //use hardware.Name to get CPU model
+                foreach (var sensor in hardware.Sensors)
+                {
+                    if (sensor.SensorType == SensorType.Temperature && sensor.Value.HasValue)
+                        coreAndTemperature.Add(sensor.Name, sensor.Value.Value);
+                }
+            }
+
+            return coreAndTemperature;
+        }
+
+        public void Dispose()
+        {
+            try
+            {
+                _computer.Close();
+            }
+            catch (Exception)
+            {
+                //ignore closing errors
+            }
         }
     }
 }

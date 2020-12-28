@@ -58,14 +58,15 @@
             this.cPUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.motherBoardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rAMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rAM2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graphicCardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.softwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.devicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diskDriveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rAM2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.softToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.networkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.megaExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.temperaturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TabbLayout.SuspendLayout();
             this.MotherBoard.SuspendLayout();
             this.GraphicCard.SuspendLayout();
@@ -370,7 +371,8 @@
             this.diskDriveToolStripMenuItem,
             this.softToolStripMenuItem,
             this.networkToolStripMenuItem,
-            this.megaExportToolStripMenuItem});
+            this.megaExportToolStripMenuItem,
+            this.temperaturesToolStripMenuItem});
             this.консолькаToolStripMenuItem.Name = "консолькаToolStripMenuItem";
             this.консолькаToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.консолькаToolStripMenuItem.Text = "Консолька";
@@ -396,6 +398,13 @@
             this.rAMToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.rAMToolStripMenuItem.Text = "RAM";
             this.rAMToolStripMenuItem.Click += new System.EventHandler(this.rAMToolStripMenuItem_Click);
+            // 
+            // rAM2ToolStripMenuItem
+            // 
+            this.rAM2ToolStripMenuItem.Name = "rAM2ToolStripMenuItem";
+            this.rAM2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rAM2ToolStripMenuItem.Text = "RAM2";
+            this.rAM2ToolStripMenuItem.Click += new System.EventHandler(this.rAM2ToolStripMenuItem_Click);
             // 
             // graphicCardToolStripMenuItem
             // 
@@ -425,13 +434,6 @@
             this.diskDriveToolStripMenuItem.Text = "DiskDrive";
             this.diskDriveToolStripMenuItem.Click += new System.EventHandler(this.diskDriveToolStripMenuItem_Click);
             // 
-            // rAM2ToolStripMenuItem
-            // 
-            this.rAM2ToolStripMenuItem.Name = "rAM2ToolStripMenuItem";
-            this.rAM2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rAM2ToolStripMenuItem.Text = "RAM2";
-            this.rAM2ToolStripMenuItem.Click += new System.EventHandler(this.rAM2ToolStripMenuItem_Click);
-            // 
             // softToolStripMenuItem
             // 
             this.softToolStripMenuItem.Name = "softToolStripMenuItem";
@@ -452,6 +454,13 @@
             this.megaExportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.megaExportToolStripMenuItem.Text = "MegaExport";
             this.megaExportToolStripMenuItem.Click += new System.EventHandler(this.megaExportToolStripMenuItem_Click);
+            // 
+            // temperaturesToolStripMenuItem
+            // 
+            this.temperaturesToolStripMenuItem.Name = "temperaturesToolStripMenuItem";
+            this.temperaturesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.temperaturesToolStripMenuItem.Text = "temperatures";
+            this.temperaturesToolStripMenuItem.Click += new System.EventHandler(this.temperaturesToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -523,6 +532,7 @@
         private System.Windows.Forms.ToolStripMenuItem softToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem networkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem megaExportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem temperaturesToolStripMenuItem;
     }
 }
 
