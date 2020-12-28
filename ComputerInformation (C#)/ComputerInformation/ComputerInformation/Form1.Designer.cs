@@ -65,6 +65,7 @@
             this.rAM2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.softToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.networkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.megaExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TabbLayout.SuspendLayout();
             this.MotherBoard.SuspendLayout();
             this.GraphicCard.SuspendLayout();
@@ -368,7 +369,8 @@
             this.devicesToolStripMenuItem,
             this.diskDriveToolStripMenuItem,
             this.softToolStripMenuItem,
-            this.networkToolStripMenuItem});
+            this.networkToolStripMenuItem,
+            this.megaExportToolStripMenuItem});
             this.консолькаToolStripMenuItem.Name = "консолькаToolStripMenuItem";
             this.консолькаToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.консолькаToolStripMenuItem.Text = "Консолька";
@@ -444,6 +446,13 @@
             this.networkToolStripMenuItem.Text = "Network";
             this.networkToolStripMenuItem.Click += new System.EventHandler(this.networkToolStripMenuItem_Click);
             // 
+            // megaExportToolStripMenuItem
+            // 
+            this.megaExportToolStripMenuItem.Name = "megaExportToolStripMenuItem";
+            this.megaExportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.megaExportToolStripMenuItem.Text = "MegaExport";
+            this.megaExportToolStripMenuItem.Click += new System.EventHandler(this.megaExportToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -513,6 +522,7 @@
         private System.Windows.Forms.ToolStripMenuItem rAM2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem softToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem networkToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem megaExportToolStripMenuItem;
     }
 }
 

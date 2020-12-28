@@ -712,6 +712,12 @@ namespace ComputerInformation
             Console.WriteLine("Сеть:");
             Console.WriteLine(loaderInfo.loadNetwork());
         }
+
+        private void megaExportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Все вместе:");
+            Console.WriteLine(loaderInfo.megaExport());
+        }
     }
 }
 
