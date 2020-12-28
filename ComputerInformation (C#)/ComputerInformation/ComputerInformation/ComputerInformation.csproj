@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="create_table.sql" />
+    <Content Include="create_table_v2.sql" />
     <Content Include="OpenHardwareMonitorLib.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
