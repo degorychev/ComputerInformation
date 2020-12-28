@@ -61,6 +61,10 @@
             this.graphicCardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.softwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.devicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.diskDriveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rAM2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.softToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.networkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TabbLayout.SuspendLayout();
             this.MotherBoard.SuspendLayout();
             this.GraphicCard.SuspendLayout();
@@ -358,9 +362,13 @@
             this.cPUToolStripMenuItem,
             this.motherBoardToolStripMenuItem,
             this.rAMToolStripMenuItem,
+            this.rAM2ToolStripMenuItem,
             this.graphicCardToolStripMenuItem,
             this.softwareToolStripMenuItem,
-            this.devicesToolStripMenuItem});
+            this.devicesToolStripMenuItem,
+            this.diskDriveToolStripMenuItem,
+            this.softToolStripMenuItem,
+            this.networkToolStripMenuItem});
             this.консолькаToolStripMenuItem.Name = "консолькаToolStripMenuItem";
             this.консолькаToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.консолькаToolStripMenuItem.Text = "Консолька";
@@ -407,6 +415,34 @@
             this.devicesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.devicesToolStripMenuItem.Text = "Devices";
             this.devicesToolStripMenuItem.Click += new System.EventHandler(this.devicesToolStripMenuItem_Click);
+            // 
+            // diskDriveToolStripMenuItem
+            // 
+            this.diskDriveToolStripMenuItem.Name = "diskDriveToolStripMenuItem";
+            this.diskDriveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.diskDriveToolStripMenuItem.Text = "DiskDrive";
+            this.diskDriveToolStripMenuItem.Click += new System.EventHandler(this.diskDriveToolStripMenuItem_Click);
+            // 
+            // rAM2ToolStripMenuItem
+            // 
+            this.rAM2ToolStripMenuItem.Name = "rAM2ToolStripMenuItem";
+            this.rAM2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rAM2ToolStripMenuItem.Text = "RAM2";
+            this.rAM2ToolStripMenuItem.Click += new System.EventHandler(this.rAM2ToolStripMenuItem_Click);
+            // 
+            // softToolStripMenuItem
+            // 
+            this.softToolStripMenuItem.Name = "softToolStripMenuItem";
+            this.softToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.softToolStripMenuItem.Text = "Soft";
+            this.softToolStripMenuItem.Click += new System.EventHandler(this.softToolStripMenuItem_Click);
+            // 
+            // networkToolStripMenuItem
+            // 
+            this.networkToolStripMenuItem.Name = "networkToolStripMenuItem";
+            this.networkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.networkToolStripMenuItem.Text = "Network";
+            this.networkToolStripMenuItem.Click += new System.EventHandler(this.networkToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -473,6 +509,10 @@
         private System.Windows.Forms.ToolStripMenuItem graphicCardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem softwareToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem devicesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem diskDriveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rAM2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem softToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem networkToolStripMenuItem;
     }
 }
 

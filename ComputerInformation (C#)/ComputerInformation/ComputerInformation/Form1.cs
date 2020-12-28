@@ -655,33 +655,62 @@ namespace ComputerInformation
 
         private void cPUToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("Процессор:");
             Console.WriteLine(loaderInfo.loadCPU());
         }
 
         private void motherBoardToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("Материнская плата:");
             Console.WriteLine(loaderInfo.loadMotherBoard());
         }
 
         private void rAMToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("ОЗУ:");
             Console.WriteLine(loaderInfo.loadRAM());
         }
 
         private void graphicCardToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("Видеокарта:");
             Console.WriteLine(loaderInfo.loadGraphicCard());
         }
 
         private void softwareToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("Софт:");
             Console.WriteLine(loaderInfo.loadSoftware());
         }
 
         private void devicesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("Устройства:");
             Console.WriteLine(loaderInfo.loadDevices());
+        }
 
+        private void diskDriveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Винчестер:");
+            Console.WriteLine(loaderInfo.loadDiskDrive());
+        }
+
+        private void rAM2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Физическая память:");
+            Console.WriteLine(loaderInfo.loadRAM2());
+        }
+
+        private void softToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Установленный софт:");
+            Console.WriteLine(loaderInfo.loadSoft());
+        }
+
+        private void networkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Сеть:");
+            Console.WriteLine(loaderInfo.loadNetwork());
         }
     }
 }
