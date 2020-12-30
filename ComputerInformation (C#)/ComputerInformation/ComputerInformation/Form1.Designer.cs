@@ -67,6 +67,9 @@
             this.networkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.megaExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.temperaturesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.консолька2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cPuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.TabbLayout.SuspendLayout();
             this.MotherBoard.SuspendLayout();
             this.GraphicCard.SuspendLayout();
@@ -344,7 +347,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.экспортToolStripMenuItem,
-            this.консолькаToolStripMenuItem});
+            this.консолькаToolStripMenuItem,
+            this.консолька2ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(506, 24);
@@ -372,7 +376,8 @@
             this.softToolStripMenuItem,
             this.networkToolStripMenuItem,
             this.megaExportToolStripMenuItem,
-            this.temperaturesToolStripMenuItem});
+            this.temperaturesToolStripMenuItem,
+            this.sendToolStripMenuItem});
             this.консолькаToolStripMenuItem.Name = "консолькаToolStripMenuItem";
             this.консолькаToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.консолькаToolStripMenuItem.Text = "Консолька";
@@ -462,6 +467,28 @@
             this.temperaturesToolStripMenuItem.Text = "temperatures";
             this.temperaturesToolStripMenuItem.Click += new System.EventHandler(this.temperaturesToolStripMenuItem_Click);
             // 
+            // sendToolStripMenuItem
+            // 
+            this.sendToolStripMenuItem.Name = "sendToolStripMenuItem";
+            this.sendToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sendToolStripMenuItem.Text = "Send";
+            this.sendToolStripMenuItem.Click += new System.EventHandler(this.sendToolStripMenuItem_Click);
+            // 
+            // консолька2ToolStripMenuItem
+            // 
+            this.консолька2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cPuToolStripMenuItem1});
+            this.консолька2ToolStripMenuItem.Name = "консолька2ToolStripMenuItem";
+            this.консолька2ToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.консолька2ToolStripMenuItem.Text = "Консолька 2";
+            // 
+            // cPuToolStripMenuItem1
+            // 
+            this.cPuToolStripMenuItem1.Name = "cPuToolStripMenuItem1";
+            this.cPuToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.cPuToolStripMenuItem1.Text = "CPU";
+            this.cPuToolStripMenuItem1.Click += new System.EventHandler(this.cPuToolStripMenuItem1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -533,6 +560,9 @@
         private System.Windows.Forms.ToolStripMenuItem networkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem megaExportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem temperaturesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sendToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem консолька2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cPuToolStripMenuItem1;
     }
 }
 

@@ -727,6 +727,17 @@ namespace ComputerInformation
             foreach (var sensor in te)
                 Console.WriteLine(String.Format("{0}: {1}", sensor.Key, sensor.Value));
         }
+        dbworker dbw = new dbworker();
+        private void sendToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cPuToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(loaderinfo_dict.loadCPU().print());
+        }
+
     }
 
     internal sealed class CpuTemperatureReader : IDisposable

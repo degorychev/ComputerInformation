@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,22 @@ namespace ComputerInformation
             mySqlConnectionStringBuilder.Database = "test";
             mySqlConnectionStringBuilder.CharacterSet = "utf8";
             Connection = new MySqlConnection(mySqlConnectionStringBuilder.ConnectionString);
+        }
+
+        public infoStruct SendComp(string json)
+        {
+            infoStruct output = new infoStruct();
+            var jarr = JArray.Parse(json);
+            foreach (var i in jarr)
+            {
+                var data = JArray.Parse(JObject.Parse(i.ToString())["value"].ToString());
+                foreach (var value in data)
+                {
+                    Console.WriteLine(value);
+                }
+
+            }
+            return output;
         }
 
         public infoStruct test()

@@ -30,6 +30,8 @@ namespace ComputerInformation
         {
             var output = new Newtonsoft.Json.Linq.JArray();
             var objs = new ManagementObjectSearcher("select * from Win32_Processor").Get().Cast<ManagementObject>();
+            //var hwsf = new HWSW(objs);
+
             foreach (var obj in objs)
             {
                 var jsonMessage = new Newtonsoft.Json.Linq.JObject();
