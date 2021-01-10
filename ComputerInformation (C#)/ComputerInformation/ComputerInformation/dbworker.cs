@@ -66,6 +66,38 @@ namespace ComputerInformation
             return output;
         }
 
+        public void upload(HWSW input)
+        {
+            var command = input.CreateTable(Connection, "CPU", "CPU_");
+            try
+            {
+                Connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                Connection.Close();
+            }
+            command = input.GetInsertString(Connection, "CPU_");
+            try
+            {
+                Connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
+
         public infoStruct SendInformation(comp input)
         {
 

@@ -735,7 +735,9 @@ namespace ComputerInformation
 
         private void cPuToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(loaderinfo_dict.loadCPU().print());
+            var cpu = loaderinfo_dict.loadCPU();
+            Console.WriteLine(cpu.print());
+            dbw.upload(cpu);
         }
 
     }
