@@ -12,9 +12,9 @@ namespace CompInfoConsole
         MySqlConnectionStringBuilder mySqlConnectionStringBuilder = new MySqlConnectionStringBuilder();
         public dbworker()
         {
-            mySqlConnectionStringBuilder.Server = "192.168.11.59";
-            mySqlConnectionStringBuilder.UserID = "ivc";
-            mySqlConnectionStringBuilder.Password = "MyP@rol";
+            mySqlConnectionStringBuilder.Server = "127.0.0.1";
+            mySqlConnectionStringBuilder.UserID = "root";
+            mySqlConnectionStringBuilder.Password = "";
             mySqlConnectionStringBuilder.Port = 3306;
             mySqlConnectionStringBuilder.Database = "ComputerInformation";
             mySqlConnectionStringBuilder.CharacterSet = "utf8";
