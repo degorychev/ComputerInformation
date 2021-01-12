@@ -10,7 +10,10 @@ namespace CompInfoConsole
     public class HWSW //Типа HardWare_SoftWare
     {
         public List<Dictionary<string, string>> M_objects = new List<Dictionary<string, string>>();
-
+        public HWSW(List<Dictionary<string, string>> softwares)
+        {
+            M_objects = softwares;
+        }
         public HWSW(IEnumerable<ManagementObject> objects)
         {
             foreach (var obj in objects)

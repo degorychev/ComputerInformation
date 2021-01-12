@@ -12,11 +12,11 @@ namespace CompInfoConsole
         MySqlConnectionStringBuilder mySqlConnectionStringBuilder = new MySqlConnectionStringBuilder();
         public dbworker()
         {
-            mySqlConnectionStringBuilder.Server = "localhost";
-            mySqlConnectionStringBuilder.UserID = "root";
-            mySqlConnectionStringBuilder.Password = "";
+            mySqlConnectionStringBuilder.Server = "192.168.11.59";
+            mySqlConnectionStringBuilder.UserID = "ivc";
+            mySqlConnectionStringBuilder.Password = "MyP@rol";
             mySqlConnectionStringBuilder.Port = 3306;
-            mySqlConnectionStringBuilder.Database = "comps";
+            mySqlConnectionStringBuilder.Database = "ComputerInformation";
             mySqlConnectionStringBuilder.CharacterSet = "utf8";
             Connection = new MySqlConnection(mySqlConnectionStringBuilder.ConnectionString);
         }
