@@ -21,6 +21,29 @@ namespace CompInfoConsole
             Connection = new MySqlConnection(mySqlConnectionStringBuilder.ConnectionString);
         }
 
+        public bool CheckInventNo(string invent)
+        {
+            MySqlCommand comm = Connection.CreateCommand();
+            comm.CommandText = "SELECT * from comps WHERE `invent_no` LIKE ?invent";
+            comm.Parameters.Add("?invent", MySqlDbType.VarChar).Value = invent;
+            try
+            {
+                Connection.Open();
+                var rows = comm.ExecuteReader();
+                return rows.HasRows;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                Connection.Close();
+            }
+            return false;
+        }
+
+
         public bool online()
         {
             MySqlCommand comm = Connection.CreateCommand();
@@ -73,7 +96,8 @@ namespace CompInfoConsole
 	`invent_no` VARCHAR(50) NULL DEFAULT NULL,
 	`kabinet` VARCHAR(50) NULL DEFAULT NULL,
 	`n_pc` VARCHAR(50) NULL DEFAULT NULL,
-	PRIMARY KEY (`id`)
+	PRIMARY KEY (`id`),
+    UNIQUE INDEX `invent_no` (`invent_no`)
 )
 COLLATE='utf8mb4_general_ci'
 ENGINE=InnoDB;";

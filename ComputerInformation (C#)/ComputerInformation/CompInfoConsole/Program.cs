@@ -24,25 +24,39 @@ namespace CompInfoConsole
             }
             Console.WriteLine("database online");
             Console.Write("Введите инвентарный номер: ");
-            string invent_no = Console.ReadLine();
+            string invent_no = null;
+            do
+            {
+                if (invent_no != null)
+                    Console.Write("Такой инвентарный номер уже присутствует в базе данных! \nНовое значение: ");
+                invent_no = Console.ReadLine();
+            } while (dbw.CheckInventNo(invent_no));
             Console.Write("Введите кабинет, в котором расположен компьютер: ");
             string kabinet = Console.ReadLine();
             Console.Write("Введите номер компьютера в кабинете: ");
             string n_pc = Console.ReadLine();
 
-            Console.WriteLine("Collecting information... сan take a few seconds");
-
+            Console.WriteLine("Collecting information about CPU");
             var cpu = loader.loadCPU();
+            Console.WriteLine("Collecting information about DEV");
             var dev = loader.loadDevices();
+            Console.WriteLine("Collecting information about DiskDrive");
             var DD = loader.loadDiskDrive();
+            Console.WriteLine("Collecting information about GPU");
             var GC = loader.loadGraphicCard();
+            Console.WriteLine("Collecting information about Motherboard");
             var MB = loader.loadMotherBoard();
+            Console.WriteLine("Collecting information about Net");
             var Net = loader.loadNetwork();
+            Console.WriteLine("Collecting information about ComputerSystem");
             var RAM = loader.loadRAM();
+            Console.WriteLine("Collecting information about RAM");
             var RAM2 = loader.loadRAM2();
+            Console.WriteLine("Collecting information about OS");
             var OS = loader.loadOS();
+            Console.WriteLine("Collecting information about Soft");
             var SOFT = loader.loadSoftWare();
-                        
+
             bool createTables = config.Read("createtable", "program") == "1";
             if(createTables)
             {
