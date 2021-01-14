@@ -14,14 +14,29 @@ namespace infoviewer
 {    
     public partial class Form1 : Form
     {
+        dbworker dbw;
         public Form1()
         {
             InitializeComponent();
-            GetComps();
-            TreesInit();
+            if (connectdb())
+            {
+                GetComps();
+                TreesInit();
+            }
         }
-        
-        dbworker dbw = new dbworker();
+
+        private bool connectdb()
+        {
+            INIManager config = new INIManager("config.ini");
+            string db_server = config.Read("server", "db");
+            string db_user = config.Read("user", "db");
+            string db_pass = config.Read("pass", "db");
+            string db_database = config.Read("database", "db");
+
+            dbw = new dbworker(db_server, db_user, db_pass, db_database);
+            return dbw.online();
+        }
+
         public void GetComps()
         {
             var comps = dbw.getComps();
