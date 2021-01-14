@@ -10,15 +10,37 @@ namespace CompInfoConsole
     {
         MySqlConnection Connection;
         MySqlConnectionStringBuilder mySqlConnectionStringBuilder = new MySqlConnectionStringBuilder();
-        public dbworker()
+        public dbworker(string server, string user, string pass, string database)
         {
-            mySqlConnectionStringBuilder.Server = "127.0.0.1";
-            mySqlConnectionStringBuilder.UserID = "root";
-            mySqlConnectionStringBuilder.Password = "";
+            mySqlConnectionStringBuilder.Server = server;
+            mySqlConnectionStringBuilder.UserID = user;
+            mySqlConnectionStringBuilder.Password = pass;
             mySqlConnectionStringBuilder.Port = 3306;
-            mySqlConnectionStringBuilder.Database = "ComputerInformation";
+            mySqlConnectionStringBuilder.Database = database;
             mySqlConnectionStringBuilder.CharacterSet = "utf8";
             Connection = new MySqlConnection(mySqlConnectionStringBuilder.ConnectionString);
+        }
+
+        public bool online()
+        {
+            MySqlCommand comm = Connection.CreateCommand();
+            comm.CommandText = "SELECT 1";
+
+            try
+            {
+                Connection.Open();
+                comm.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                Connection.Close();
+            }
+            return false;
         }
 
         public long UploadComp(string inventNomer, string kabinet, string n_pc)

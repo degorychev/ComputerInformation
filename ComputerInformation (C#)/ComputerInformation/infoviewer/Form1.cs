@@ -32,7 +32,7 @@ namespace infoviewer
 
         private void listComps_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listComps.SelectedIndex >= 0)
+            if (listComps.SelectedIndex != -1)
             {
                 try
                 {

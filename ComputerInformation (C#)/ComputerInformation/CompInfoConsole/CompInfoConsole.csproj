@@ -47,12 +47,16 @@
   <ItemGroup>
     <Compile Include="dbworker.cs" />
     <Compile Include="hwsf.cs" />
+    <Compile Include="INIManager.cs" />
     <Compile Include="loader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

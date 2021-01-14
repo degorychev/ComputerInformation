@@ -7,8 +7,22 @@ namespace CompInfoConsole
 {
     class Program
     {
+        static INIManager config = new INIManager("config.ini");
         static void Main(string[] args)
         {
+            string db_server = config.Read("server", "db");
+            string db_user = config.Read("user", "db");
+            string db_pass = config.Read("pass", "db");
+            string db_database = config.Read("database", "db");
+
+            dbworker dbw = new dbworker(db_server, db_user, db_pass, db_database);
+            Console.WriteLine("testing connectino to database...");
+            if(!dbw.online())
+            {
+                Console.ReadLine();
+                return;
+            }
+            Console.WriteLine("database online");
             Console.Write("Введите инвентарный номер: ");
             string invent_no = Console.ReadLine();
             Console.Write("Введите кабинет, в котором расположен компьютер: ");
@@ -28,10 +42,8 @@ namespace CompInfoConsole
             var RAM2 = loader.loadRAM2();
             var OS = loader.loadOS();
             var SOFT = loader.loadSoftWare();
-
-
-            dbworker dbw = new dbworker();
-            bool createTables = false;
+                        
+            bool createTables = config.Read("createtable", "program") == "1";
             if(createTables)
             {
                 dbw.CreateTableComp();
