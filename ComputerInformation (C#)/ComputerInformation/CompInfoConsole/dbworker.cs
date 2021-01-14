@@ -143,7 +143,14 @@ ENGINE=InnoDB;";
                 comm.CommandText += "(" + String.Join(",", values) + ",?npc"+ n.ToString() + "),";
 
                 foreach (var parametr in keys)
-                    comm.Parameters.Add("?" + parametr + n, MySqlDbType.VarChar).Value = obj[parametr];
+                {
+                    var test = obj[parametr];
+                    if (test != null)
+                        if (test.Length > 298)
+                            test = test.Remove(297);
+                    //Console.WriteLine(test);
+                    comm.Parameters.Add("?" + parametr + n, MySqlDbType.VarChar).Value = test;
+                }
                 comm.Parameters.Add("?npc"+n.ToString(), MySqlDbType.Int32).Value = npc;
                 n++;
             }
