@@ -37,15 +37,15 @@ namespace infoviewer
             WritePrivateProfileString(Section ?? EXE, Key, Value, Path);
         }
 
-        public void DeleteKey(string Key, string Section = null)
-        {
-            Write(Key, null, Section ?? EXE);
-        }
+        //public void DeleteKey(string Key, string Section = null)
+        //{
+        //    Write(Key, null, Section ?? EXE);
+        //}
 
-        public void DeleteSection(string Section = null)
-        {
-            Write(null, null, Section ?? EXE);
-        }
+        //public void DeleteSection(string Section = null)
+        //{
+        //    Write(null, null, Section ?? EXE);
+        //}
 
         public bool KeyExists(string Key, string Section = null)
         {

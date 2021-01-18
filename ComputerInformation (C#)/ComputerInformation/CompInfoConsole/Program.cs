@@ -16,7 +16,7 @@ namespace CompInfoConsole
             string db_database = config.Read("database", "db");
 
             dbworker dbw = new dbworker(db_server, db_user, db_pass, db_database);
-            Console.WriteLine("testing connectino to database...");
+            Console.WriteLine("testing connection to database...");
             if(!dbw.online())
             {
                 Console.ReadLine();

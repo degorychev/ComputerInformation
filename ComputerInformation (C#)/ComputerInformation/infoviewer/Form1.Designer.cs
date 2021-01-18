@@ -30,51 +30,52 @@
         {
             this.components = new System.ComponentModel.Container();
             this.listComps = new System.Windows.Forms.ListBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageCPU = new System.Windows.Forms.TabPage();
             this.CPU_info = new BrightIdeasSoftware.TreeListView();
             this.tabPageDiskDrive = new System.Windows.Forms.TabPage();
-            this.tabPageDev = new System.Windows.Forms.TabPage();
-            this.tabPageGC = new System.Windows.Forms.TabPage();
-            this.tabPageMB = new System.Windows.Forms.TabPage();
-            this.tabPageNet = new System.Windows.Forms.TabPage();
-            this.tabPageOS = new System.Windows.Forms.TabPage();
-            this.tabPageRAM = new System.Windows.Forms.TabPage();
-            this.tabPageRAM2 = new System.Windows.Forms.TabPage();
-            this.tabPageSoft = new System.Windows.Forms.TabPage();
             this.DD_info = new BrightIdeasSoftware.TreeListView();
+            this.tabPageDev = new System.Windows.Forms.TabPage();
             this.Dev_info = new BrightIdeasSoftware.TreeListView();
+            this.tabPageGC = new System.Windows.Forms.TabPage();
             this.GC_info = new BrightIdeasSoftware.TreeListView();
+            this.tabPageMB = new System.Windows.Forms.TabPage();
             this.MB_info = new BrightIdeasSoftware.TreeListView();
+            this.tabPageNet = new System.Windows.Forms.TabPage();
             this.Net_info = new BrightIdeasSoftware.TreeListView();
+            this.tabPageOS = new System.Windows.Forms.TabPage();
             this.OS_info = new BrightIdeasSoftware.TreeListView();
+            this.tabPageRAM = new System.Windows.Forms.TabPage();
             this.RAM_info = new BrightIdeasSoftware.TreeListView();
+            this.tabPageRAM2 = new System.Windows.Forms.TabPage();
             this.RAM2_info = new BrightIdeasSoftware.TreeListView();
+            this.tabPageSoft = new System.Windows.Forms.TabPage();
             this.Soft_info = new BrightIdeasSoftware.TreeListView();
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ryjgrfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPageCPU.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPU_info)).BeginInit();
             this.tabPageDiskDrive.SuspendLayout();
-            this.tabPageDev.SuspendLayout();
-            this.tabPageGC.SuspendLayout();
-            this.tabPageMB.SuspendLayout();
-            this.tabPageNet.SuspendLayout();
-            this.tabPageOS.SuspendLayout();
-            this.tabPageRAM.SuspendLayout();
-            this.tabPageRAM2.SuspendLayout();
-            this.tabPageSoft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DD_info)).BeginInit();
+            this.tabPageDev.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dev_info)).BeginInit();
+            this.tabPageGC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GC_info)).BeginInit();
+            this.tabPageMB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MB_info)).BeginInit();
+            this.tabPageNet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Net_info)).BeginInit();
+            this.tabPageOS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OS_info)).BeginInit();
+            this.tabPageRAM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RAM_info)).BeginInit();
+            this.tabPageRAM2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RAM2_info)).BeginInit();
+            this.tabPageSoft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Soft_info)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listComps
@@ -86,23 +87,7 @@
             this.listComps.Name = "listComps";
             this.listComps.Size = new System.Drawing.Size(205, 472);
             this.listComps.TabIndex = 0;
-            this.listComps.SelectedIndexChanged += new System.EventHandler(this.listComps_SelectedIndexChanged);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(867, 24);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
-            this.toolStripMenuItem1.Text = "123";
+            this.listComps.SelectedValueChanged += new System.EventHandler(this.listComps_SelectedValueChanged);
             // 
             // tabControl1
             // 
@@ -146,7 +131,7 @@
             this.CPU_info.Location = new System.Drawing.Point(6, 6);
             this.CPU_info.Name = "CPU_info";
             this.CPU_info.ShowGroups = false;
-            this.CPU_info.Size = new System.Drawing.Size(612, 435);
+            this.CPU_info.Size = new System.Drawing.Size(612, 422);
             this.CPU_info.TabIndex = 4;
             this.CPU_info.UseCompatibleStateImageBehavior = false;
             this.CPU_info.View = System.Windows.Forms.View.Details;
@@ -158,90 +143,10 @@
             this.tabPageDiskDrive.Location = new System.Drawing.Point(4, 22);
             this.tabPageDiskDrive.Name = "tabPageDiskDrive";
             this.tabPageDiskDrive.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDiskDrive.Size = new System.Drawing.Size(624, 447);
+            this.tabPageDiskDrive.Size = new System.Drawing.Size(624, 460);
             this.tabPageDiskDrive.TabIndex = 1;
             this.tabPageDiskDrive.Text = "DiskDrive";
             this.tabPageDiskDrive.UseVisualStyleBackColor = true;
-            // 
-            // tabPageDev
-            // 
-            this.tabPageDev.Controls.Add(this.Dev_info);
-            this.tabPageDev.Location = new System.Drawing.Point(4, 22);
-            this.tabPageDev.Name = "tabPageDev";
-            this.tabPageDev.Size = new System.Drawing.Size(624, 447);
-            this.tabPageDev.TabIndex = 2;
-            this.tabPageDev.Text = "Devices";
-            this.tabPageDev.UseVisualStyleBackColor = true;
-            // 
-            // tabPageGC
-            // 
-            this.tabPageGC.Controls.Add(this.GC_info);
-            this.tabPageGC.Location = new System.Drawing.Point(4, 22);
-            this.tabPageGC.Name = "tabPageGC";
-            this.tabPageGC.Size = new System.Drawing.Size(624, 447);
-            this.tabPageGC.TabIndex = 3;
-            this.tabPageGC.Text = "Graphic Card";
-            this.tabPageGC.UseVisualStyleBackColor = true;
-            // 
-            // tabPageMB
-            // 
-            this.tabPageMB.Controls.Add(this.MB_info);
-            this.tabPageMB.Location = new System.Drawing.Point(4, 22);
-            this.tabPageMB.Name = "tabPageMB";
-            this.tabPageMB.Size = new System.Drawing.Size(624, 447);
-            this.tabPageMB.TabIndex = 4;
-            this.tabPageMB.Text = "MotherBoard";
-            this.tabPageMB.UseVisualStyleBackColor = true;
-            // 
-            // tabPageNet
-            // 
-            this.tabPageNet.Controls.Add(this.Net_info);
-            this.tabPageNet.Location = new System.Drawing.Point(4, 22);
-            this.tabPageNet.Name = "tabPageNet";
-            this.tabPageNet.Size = new System.Drawing.Size(624, 447);
-            this.tabPageNet.TabIndex = 5;
-            this.tabPageNet.Text = "Network";
-            this.tabPageNet.UseVisualStyleBackColor = true;
-            // 
-            // tabPageOS
-            // 
-            this.tabPageOS.Controls.Add(this.OS_info);
-            this.tabPageOS.Location = new System.Drawing.Point(4, 22);
-            this.tabPageOS.Name = "tabPageOS";
-            this.tabPageOS.Size = new System.Drawing.Size(624, 447);
-            this.tabPageOS.TabIndex = 6;
-            this.tabPageOS.Text = "Operating system";
-            this.tabPageOS.UseVisualStyleBackColor = true;
-            // 
-            // tabPageRAM
-            // 
-            this.tabPageRAM.Controls.Add(this.RAM_info);
-            this.tabPageRAM.Location = new System.Drawing.Point(4, 22);
-            this.tabPageRAM.Name = "tabPageRAM";
-            this.tabPageRAM.Size = new System.Drawing.Size(624, 447);
-            this.tabPageRAM.TabIndex = 7;
-            this.tabPageRAM.Text = "RAM";
-            this.tabPageRAM.UseVisualStyleBackColor = true;
-            // 
-            // tabPageRAM2
-            // 
-            this.tabPageRAM2.Controls.Add(this.RAM2_info);
-            this.tabPageRAM2.Location = new System.Drawing.Point(4, 22);
-            this.tabPageRAM2.Name = "tabPageRAM2";
-            this.tabPageRAM2.Size = new System.Drawing.Size(624, 447);
-            this.tabPageRAM2.TabIndex = 8;
-            this.tabPageRAM2.Text = "RAM2";
-            this.tabPageRAM2.UseVisualStyleBackColor = true;
-            // 
-            // tabPageSoft
-            // 
-            this.tabPageSoft.Controls.Add(this.Soft_info);
-            this.tabPageSoft.Location = new System.Drawing.Point(4, 22);
-            this.tabPageSoft.Name = "tabPageSoft";
-            this.tabPageSoft.Size = new System.Drawing.Size(624, 447);
-            this.tabPageSoft.TabIndex = 9;
-            this.tabPageSoft.Text = "Software";
-            this.tabPageSoft.UseVisualStyleBackColor = true;
             // 
             // DD_info
             // 
@@ -259,6 +164,16 @@
             this.DD_info.View = System.Windows.Forms.View.Details;
             this.DD_info.VirtualMode = true;
             // 
+            // tabPageDev
+            // 
+            this.tabPageDev.Controls.Add(this.Dev_info);
+            this.tabPageDev.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDev.Name = "tabPageDev";
+            this.tabPageDev.Size = new System.Drawing.Size(624, 460);
+            this.tabPageDev.TabIndex = 2;
+            this.tabPageDev.Text = "Devices";
+            this.tabPageDev.UseVisualStyleBackColor = true;
+            // 
             // Dev_info
             // 
             this.Dev_info.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -274,6 +189,16 @@
             this.Dev_info.UseCompatibleStateImageBehavior = false;
             this.Dev_info.View = System.Windows.Forms.View.Details;
             this.Dev_info.VirtualMode = true;
+            // 
+            // tabPageGC
+            // 
+            this.tabPageGC.Controls.Add(this.GC_info);
+            this.tabPageGC.Location = new System.Drawing.Point(4, 22);
+            this.tabPageGC.Name = "tabPageGC";
+            this.tabPageGC.Size = new System.Drawing.Size(624, 460);
+            this.tabPageGC.TabIndex = 3;
+            this.tabPageGC.Text = "Graphic Card";
+            this.tabPageGC.UseVisualStyleBackColor = true;
             // 
             // GC_info
             // 
@@ -291,6 +216,16 @@
             this.GC_info.View = System.Windows.Forms.View.Details;
             this.GC_info.VirtualMode = true;
             // 
+            // tabPageMB
+            // 
+            this.tabPageMB.Controls.Add(this.MB_info);
+            this.tabPageMB.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMB.Name = "tabPageMB";
+            this.tabPageMB.Size = new System.Drawing.Size(624, 460);
+            this.tabPageMB.TabIndex = 4;
+            this.tabPageMB.Text = "MotherBoard";
+            this.tabPageMB.UseVisualStyleBackColor = true;
+            // 
             // MB_info
             // 
             this.MB_info.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -306,6 +241,16 @@
             this.MB_info.UseCompatibleStateImageBehavior = false;
             this.MB_info.View = System.Windows.Forms.View.Details;
             this.MB_info.VirtualMode = true;
+            // 
+            // tabPageNet
+            // 
+            this.tabPageNet.Controls.Add(this.Net_info);
+            this.tabPageNet.Location = new System.Drawing.Point(4, 22);
+            this.tabPageNet.Name = "tabPageNet";
+            this.tabPageNet.Size = new System.Drawing.Size(624, 460);
+            this.tabPageNet.TabIndex = 5;
+            this.tabPageNet.Text = "Network";
+            this.tabPageNet.UseVisualStyleBackColor = true;
             // 
             // Net_info
             // 
@@ -323,6 +268,16 @@
             this.Net_info.View = System.Windows.Forms.View.Details;
             this.Net_info.VirtualMode = true;
             // 
+            // tabPageOS
+            // 
+            this.tabPageOS.Controls.Add(this.OS_info);
+            this.tabPageOS.Location = new System.Drawing.Point(4, 22);
+            this.tabPageOS.Name = "tabPageOS";
+            this.tabPageOS.Size = new System.Drawing.Size(624, 460);
+            this.tabPageOS.TabIndex = 6;
+            this.tabPageOS.Text = "Operating system";
+            this.tabPageOS.UseVisualStyleBackColor = true;
+            // 
             // OS_info
             // 
             this.OS_info.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -338,6 +293,16 @@
             this.OS_info.UseCompatibleStateImageBehavior = false;
             this.OS_info.View = System.Windows.Forms.View.Details;
             this.OS_info.VirtualMode = true;
+            // 
+            // tabPageRAM
+            // 
+            this.tabPageRAM.Controls.Add(this.RAM_info);
+            this.tabPageRAM.Location = new System.Drawing.Point(4, 22);
+            this.tabPageRAM.Name = "tabPageRAM";
+            this.tabPageRAM.Size = new System.Drawing.Size(624, 460);
+            this.tabPageRAM.TabIndex = 7;
+            this.tabPageRAM.Text = "ComputerSystem";
+            this.tabPageRAM.UseVisualStyleBackColor = true;
             // 
             // RAM_info
             // 
@@ -355,6 +320,16 @@
             this.RAM_info.View = System.Windows.Forms.View.Details;
             this.RAM_info.VirtualMode = true;
             // 
+            // tabPageRAM2
+            // 
+            this.tabPageRAM2.Controls.Add(this.RAM2_info);
+            this.tabPageRAM2.Location = new System.Drawing.Point(4, 22);
+            this.tabPageRAM2.Name = "tabPageRAM2";
+            this.tabPageRAM2.Size = new System.Drawing.Size(624, 460);
+            this.tabPageRAM2.TabIndex = 8;
+            this.tabPageRAM2.Text = "RAM";
+            this.tabPageRAM2.UseVisualStyleBackColor = true;
+            // 
             // RAM2_info
             // 
             this.RAM2_info.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -365,11 +340,21 @@
             this.RAM2_info.Location = new System.Drawing.Point(6, 6);
             this.RAM2_info.Name = "RAM2_info";
             this.RAM2_info.ShowGroups = false;
-            this.RAM2_info.Size = new System.Drawing.Size(612, 435);
+            this.RAM2_info.Size = new System.Drawing.Size(612, 448);
             this.RAM2_info.TabIndex = 5;
             this.RAM2_info.UseCompatibleStateImageBehavior = false;
             this.RAM2_info.View = System.Windows.Forms.View.Details;
             this.RAM2_info.VirtualMode = true;
+            // 
+            // tabPageSoft
+            // 
+            this.tabPageSoft.Controls.Add(this.Soft_info);
+            this.tabPageSoft.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSoft.Name = "tabPageSoft";
+            this.tabPageSoft.Size = new System.Drawing.Size(624, 460);
+            this.tabPageSoft.TabIndex = 9;
+            this.tabPageSoft.Text = "Software";
+            this.tabPageSoft.UseVisualStyleBackColor = true;
             // 
             // Soft_info
             // 
@@ -387,6 +372,31 @@
             this.Soft_info.View = System.Windows.Forms.View.Details;
             this.Soft_info.VirtualMode = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ryjgrfToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(867, 24);
+            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ryjgrfToolStripMenuItem
+            // 
+            this.ryjgrfToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportToolStripMenuItem});
+            this.ryjgrfToolStripMenuItem.Name = "ryjgrfToolStripMenuItem";
+            this.ryjgrfToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.ryjgrfToolStripMenuItem.Text = "кнопка";
+            // 
+            // exportToolStripMenuItem
+            // 
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportToolStripMenuItem.Text = "Экспорт";
+            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,29 +408,29 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPageCPU.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CPU_info)).EndInit();
             this.tabPageDiskDrive.ResumeLayout(false);
-            this.tabPageDev.ResumeLayout(false);
-            this.tabPageGC.ResumeLayout(false);
-            this.tabPageMB.ResumeLayout(false);
-            this.tabPageNet.ResumeLayout(false);
-            this.tabPageOS.ResumeLayout(false);
-            this.tabPageRAM.ResumeLayout(false);
-            this.tabPageRAM2.ResumeLayout(false);
-            this.tabPageSoft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DD_info)).EndInit();
+            this.tabPageDev.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Dev_info)).EndInit();
+            this.tabPageGC.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GC_info)).EndInit();
+            this.tabPageMB.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MB_info)).EndInit();
+            this.tabPageNet.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Net_info)).EndInit();
+            this.tabPageOS.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.OS_info)).EndInit();
+            this.tabPageRAM.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RAM_info)).EndInit();
+            this.tabPageRAM2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RAM2_info)).EndInit();
+            this.tabPageSoft.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Soft_info)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,8 +439,6 @@
         #endregion
 
         private System.Windows.Forms.ListBox listComps;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPageCPU;
         private System.Windows.Forms.TabPage tabPageDiskDrive;
@@ -452,6 +460,9 @@
         private BrightIdeasSoftware.TreeListView RAM_info;
         private BrightIdeasSoftware.TreeListView RAM2_info;
         private BrightIdeasSoftware.TreeListView Soft_info;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ryjgrfToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
     }
 }
 

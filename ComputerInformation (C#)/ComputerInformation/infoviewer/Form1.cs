@@ -20,8 +20,8 @@ namespace infoviewer
             InitializeComponent();
             if (connectdb())
             {
-                GetComps();
                 TreesInit();
+                GetComps();
             }
         }
 
@@ -43,65 +43,6 @@ namespace infoviewer
             listComps.DataSource = comps;
             listComps.DisplayMember = "name";
             listComps.ValueMember = "id";
-        }
-
-        private void listComps_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listComps.SelectedIndex != -1)
-            {
-                try
-                {
-                    int id = (int)listComps.SelectedValue;
-
-                    var cpu = dbw.getInfo(id, "CPU");
-                    var dd = dbw.getInfo(id, "DD");
-                    var dev = dbw.getInfo(id, "dev");
-                    var gc = dbw.getInfo(id, "GC");
-                    var mb = dbw.getInfo(id, "MB");
-                    var net = dbw.getInfo(id, "Net");
-                    var os = dbw.getInfo(id, "OS");
-                    var ram = dbw.getInfo(id, "RAM");
-                    var ram2 = dbw.getInfo(id, "RAM2");
-                    var soft = dbw.getInfo(id, "SOFT");
-
-                    CPU_info.Roots = dataAdapter(cpu);
-                    DD_info.Roots = dataAdapter(dd);
-                    Dev_info.Roots = dataAdapter(dev);
-                    GC_info.Roots = dataAdapter(gc);
-                    MB_info.Roots = dataAdapter(mb);
-                    Net_info.Roots = dataAdapter(net);
-                    OS_info.Roots = dataAdapter(os);
-                    RAM_info.Roots = dataAdapter(ram);
-                    RAM2_info.Roots = dataAdapter(ram2);
-                    Soft_info.Roots = dataAdapter(soft);
-                    
-                    CPU_info.ExpandAll();
-                    DD_info.ExpandAll();
-                    //Dev_info.ExpandAll();
-                    GC_info.ExpandAll();
-                    MB_info.ExpandAll();
-                    //Net_info.ExpandAll();
-                    OS_info.ExpandAll();
-                    RAM_info.ExpandAll();
-                    RAM2_info.ExpandAll();
-                    //Soft_info.ExpandAll();
-
-                    CPU_info.AutoResizeColumns();
-                    DD_info.AutoResizeColumns();
-                    Dev_info.AutoResizeColumns();
-                    GC_info.AutoResizeColumns();
-                    MB_info.AutoResizeColumns();
-                    Net_info.AutoResizeColumns();
-                    OS_info.AutoResizeColumns();
-                    RAM_info.AutoResizeColumns();
-                    RAM2_info.AutoResizeColumns();
-                    Soft_info.AutoResizeColumns();
-                }
-                catch(Exception ex)
-                {
-
-                }
-            }
         }
 
         private List<TrNode> dataAdapter(DataTable input)
@@ -181,6 +122,67 @@ namespace infoviewer
             TreeInit(RAM2_info);
             TreeInit(RAM_info);
             TreeInit(Soft_info);
+        }
+
+        private void listComps_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = (int)listComps.SelectedValue;
+
+                var cpu = dbw.getInfo(id, "CPU");
+                var dd = dbw.getInfo(id, "DD");
+                var dev = dbw.getInfo(id, "dev");
+                var gc = dbw.getInfo(id, "GC");
+                var mb = dbw.getInfo(id, "MB");
+                var net = dbw.getInfo(id, "Net");
+                var os = dbw.getInfo(id, "OS");
+                var ram = dbw.getInfo(id, "RAM");
+                var ram2 = dbw.getInfo(id, "RAM2");
+                var soft = dbw.getInfo(id, "SOFT");
+
+                CPU_info.Roots = dataAdapter(cpu);
+                DD_info.Roots = dataAdapter(dd);
+                Dev_info.Roots = dataAdapter(dev);
+                GC_info.Roots = dataAdapter(gc);
+                MB_info.Roots = dataAdapter(mb);
+                Net_info.Roots = dataAdapter(net);
+                OS_info.Roots = dataAdapter(os);
+                RAM_info.Roots = dataAdapter(ram);
+                RAM2_info.Roots = dataAdapter(ram2);
+                Soft_info.Roots = dataAdapter(soft);
+
+                CPU_info.ExpandAll();
+                DD_info.ExpandAll();
+                //Dev_info.ExpandAll();
+                GC_info.ExpandAll();
+                MB_info.ExpandAll();
+                //Net_info.ExpandAll();
+                OS_info.ExpandAll();
+                RAM_info.ExpandAll();
+                RAM2_info.ExpandAll();
+                //Soft_info.ExpandAll();
+
+                CPU_info.AutoResizeColumns();
+                DD_info.AutoResizeColumns();
+                Dev_info.AutoResizeColumns();
+                GC_info.AutoResizeColumns();
+                MB_info.AutoResizeColumns();
+                Net_info.AutoResizeColumns();
+                OS_info.AutoResizeColumns();
+                RAM_info.AutoResizeColumns();
+                RAM2_info.AutoResizeColumns();
+                Soft_info.AutoResizeColumns();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void exportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
         }
     }
     class TrNode
